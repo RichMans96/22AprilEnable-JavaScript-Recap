@@ -5,26 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript Recap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="root">
-      <select id="dropdown">
-        <option value="">Create</option>
-        <option value="">Update</option>
-        <option value="">Delete</option>
-      </select>
+    <div class="root d-flex p-2 flex-column">
+      <div class="btn-group">
+        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Select Request Type
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Create</a></li>
+          <li><a class="dropdown-item" href="#">Update</a></li>
+          <li><a class="dropdown-item" href="#">Delete</a></li>
+        </ul>
+      </div>
+      <!-- <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div> -->
       <div>
-        <label for="userId">User Id</label>
-        <input type="text" id="userId" />
-        <label for="id">Id</label>
-        <input type="text" id="id" />
-        <label for="title">Title</label>
-        <input type="text" id="title" />
-        <label for="body">body</label>
-        <input type="text" id="body" />
-        <button id="submit">Submit</button>
+        <div class="input-group mb-3 pt-4 d-flex">
+          <label for="userId" class="pe-4">User Id</label>
+          <input type="text" id="userId" class="form-control" />
+        </div>
+        <div class="input-group mb-3 pt-4 d-flex">
+          <label for="id" class="pe-4">Id</label>
+          <input type="text" id="id" class="form-control" />
+        </div>
+        <div class="input-group mb-3 pt-4 d-flex">
+          <label for="title" class="pe-4">Title</label>
+          <input type="text" id="title" class="form-control" />
+        </div>
+        <div class="input-group mb-3 pt-4 d-flex">
+          <label for="body" class="pe-4">body</label>
+          <input type="text" id="body" class="form-control" />
+        </div>
+        <button id="submit" class="btn btn-outline-success">Submit</button>
       </div>
     </div>
     <script src="./dom.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
