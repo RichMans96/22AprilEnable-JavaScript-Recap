@@ -8,14 +8,22 @@
   </head>
   <body>
     <div class="root">
-      <label for="firstname">First Name</label>
-      <input type="text" id="firstname" />
-      <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" />
-      <label for="email">email</label>
-      <input type="email" id="email" />
-      <button disabled="disabled">Disbaled</button>
-      <button>Submit</button>
+      <select id="dropdown">
+        <option value="">Create</option>
+        <option value="">Update</option>
+        <option value="">Delete</option>
+      </select>
+      <div>
+        <label for="userId">User Id</label>
+        <input type="text" id="userId" />
+        <label for="id">Id</label>
+        <input type="text" id="id" />
+        <label for="title">Title</label>
+        <input type="text" id="title" />
+        <label for="body">body</label>
+        <input type="text" id="body" />
+        <button id="submit">Submit</button>
+      </div>
     </div>
     <script src="./dom.js"></script>
   </body>

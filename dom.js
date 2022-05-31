@@ -29,21 +29,28 @@ function showAllFacts({ data }) {
   }
 }
 
-function fetchDataTest() {
-  fetch('https://jsonplaceholder.typicode.com/posts').then((resp) => console.log(resp.json()));
-}
+const button = document.querySelector('#submit');
+
+button.addEventListener('click', () => {
+  postData();
+});
 
 function postData() {
+  const userId = document.querySelector('#userId').value;
+  const id = document.querySelector('#id').value;
+  const title = document.querySelector('#title').value;
+  const body = document.querySelector('#body').value;
+
   fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'post',
     headers: {
       'content-type': 'application/json',
     },
     body: JSON.stringify({
-      userId: 1,
-      id: 101,
-      title: 'ea molestias quasi exercitationem repellat qui ipsa sit aut',
-      body: 'et iusto sed quo iure',
+      userId: userId,
+      id: id,
+      title: title,
+      body: body,
     }),
   })
     .then((res) => console.log(res))
@@ -51,8 +58,3 @@ function postData() {
 }
 
 fetchData();
-
-postData();
-
-fetchDataTest();
-// https://jsonplaceholder.typicode.com/posts
