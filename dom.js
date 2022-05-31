@@ -1,15 +1,14 @@
-// const data = async () => {
-//   await fetch('https://catfact.ninja/facts')
-//     .then((res) => {
-//       if (res.status != 200) console.error(res.status);
-//       return res;
-//     }
-//     res.json().then((data) => {
-//         return data;
-//     });
-//     )
-//     .catch((err) => console.log(err));
-// };
+const data = async () => {
+  try {
+    let response = await fetch('https://catfact.ninja/facts');
+    let data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+data();
 
 function fetchData() {
   fetch('https://catfact.ninja/facts')
